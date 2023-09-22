@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween | Parallax Effects</title>
+    <link rel="stylesheet" type="text/css" href="index1.css" />
+
+</head>
+<body>
+    <section>
+        <img src="bg.jpg" id="bg" />
+        <img src="bats.png" id="bats" />
+        <img src="castle.png" id="castle" />
+        <img src="img.png" id="img" />
+        <img src="wolf.png" id="wolf" />
+    </section>
+    <div class="sec">
+        <div class="content">
+            <h2>Happy Halloween</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.to("#img", {
+            scrollTrigger : {
+                scrub:0.5,
+            },
+            x: 1500,
+            y: 500,
+        })
+
+        gsap.from("#wolf", {
+            scrollTrigger : {
+                scrub:0.5,
+            },
+            x: 400,
+        })
+
+        gsap.from("#castle", {
+            scrollTrigger : {
+                scrub:0.5,
+            },
+            x: -100,
+        })
+
+        gsap.to("#bats", {
+            scrollTrigger : {
+                scrub:0.5,
+            },
+            scale: 1.5,
+        })
+    </script>
+</body>
+</html>
